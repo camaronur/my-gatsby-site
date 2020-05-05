@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
         contentTypes: [`post`, `page`],
         //If using single types place them in this array.
