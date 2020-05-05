@@ -1,0 +1,8 @@
+.link {
+    display: block;
+  
+    &:hover {
+      color: var(--c-highlight);
+    }
+  }
+  

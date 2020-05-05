@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Onur Yılmaz Kişisel Blog`,
+    description: `Kişisel Blog denemem`,
+    author: `@camaronur`,  
+    url: 'localhost',
+    socialLinks: {
+      instagram: { name: 'Instagram', url: 'https://instagram.com/_onuryilmaz' },
+      twitter: { name: 'Twitter', url: 'https://twitter.com/camaronur' },
+      github: { name: 'Github', url: 'https://github.com/camaronur' }
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     'gatsby-transformer-remark',
     'gatsby-plugin-postcss',
     'gatsby-plugin-offline',
@@ -23,8 +31,6 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -44,6 +50,16 @@ module.exports = {
       trackingId: 'UA-17768654-1'
     }
   },
+  {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `roboto`,
+        `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+      ],
+      display: 'swap'
+    }
+  }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
